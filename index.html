@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>ADev</title>
+   
+    <!-- link de estilização-->
+    <link rel="stylesheet" href="./css/style.css">
+     <!-- Font Awesome for icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <!-- Simple Icons for other tech logos -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/7.12.0/simple-icons.min.css">
+ 
+    <style>
+        .titulotec{
+            border-bottom: 1px solid rgba(158, 157, 157, 0.451);
+            padding: 20px 35px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-size: 13pt;
+        }
+        .titulotec i{
+            color: #FF3366;
+        }
+        .tecnologias li{
+            list-style: none;
+            padding: 15px 30px; 
+            
+            
+        }
+        .tecnologias li i{
+            font-size: 20pt; 
+        }
+        .tecnologias li ul li{
+             padding: 15px;
+             margin-left: 30px;
+             font-size: 12pt;
+        }
+        .tecnologias li ul li i{
+             padding-right: 15px;
+        }
+        .descrição{
+           font-size: 15pt;
+           padding: 15px;
+           font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+   
+    <header class="cabecalio">
+        <div class="logoMarca">
+
+            <h1 class="flex-marca logo">ADev</h1>
+            <div class="flex-marca descricao">
+                <h2 class="autor">Armando D. Baltazar</h2>
+                <h2 class="job">Web Developer & UI/UX Designer</h2>
+            </div>
+
+        </div>
+        <nav class="navegacao">
+            <ul>
+                <li> <i class="fab fa-github"></i> Github</li>
+                <li><i class="fab fa-docker"></i>Dockerhub</li>
+                <li><i class="fab fa-linkedin"></i>Linkedin</li> 
+                <li><i class="fab fa-whatsapp"></i>Whatsapp</li>
+            </ul>
+        </nav>
+       
+    </header> 
+    <main class="seccaoprincipal">
+        <div class="capa_principal">
+            <div class="flexbox resumo">
+                <h2 class="autor_capa">Armando D. Baltazar</h2>
+                <h1 class="job_descricao">
+                    Web Developer & UI/UX Designer
+                </h1>
+                <h1 class="headline">
+                    Widget Inc.
+                </h1>
+                <p class="p_resumo">
+                    Web developer e designer UI/UX apaixonado por criar experiências digitais intuitivas e visualmente impactantes. Especializado na harmonia entre funcionalidade e estética para entregar interfaces que cativam e facilitam a interação do usuário.
+                </p>
+                <div class="botns">
+                    <a href="" class="link_sobre">Sobre</a>
+                    <a href="" class="link_sobre">Skills</a>
+                </div>
+            </div>
+            <div class="flexbox foto_capa" hidden>
+                
+            </div>
+        </div>
+
+        <div class="projectos" hidden>
+            <div class="flex_projecto1">
+                <h1 class="titulotec">  <i class="fas fa-code"></i> Back-End</h1>
+                <nav class="tecnologias">
+                    <ul>
+                        <li><i class="fab fa-node-js" style="color: rgb(111, 155, 50);"><label for="" class="descrição">Nodejs</label></i>
+                            <ul>
+                                <li>TypeScript</li>
+                                <li>NextJs</li>
+                                <li>Sequelize</li>
+                            </ul>
+                        </li>
+
+                        <li><i  class="fab fa-laravel" style="color: #cd1f4a;"><label for="" class="descrição">PHP / Laravel</label></i></li>
+                        <li> <i class="fas fa-database" style="color: #00758F;"><label for="" class="descrição">Databases</label>
+                        </i>
+                            <ul>
+                                <li>MySql</li>
+                                <li>SqlServer</li> 
+                                <li><i class="fas fa-leaf" style="color: #47A248;" class="descrição" hidden></i>MongoDB</li> 
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="links_projectos">
+                    <li> <i class="fab fa-docker"></i> Docker</li> 
+                    <li> <i class="fab fa-git-alt git"></i> Git</li> 
+                    <li style="color: #63cb09;">  <i class="fab fa-swagger-alt" style="color: #85EA2D;"></i> Swagger</li> 
+                    
+                </div>
+            </div>
+
+            <div class="flex_projecto1">
+                <h1 class="titulotec">  <i class="fas fa-code"></i> front-End & UI/UX designer</h1>
+                <nav class="tecnologias">
+                    <ul>
+                        <li><i class="fab fa-node-js"><label for="" class="descrição">UI/UX Designer</label></i>
+                            <ul>
+                                <li><i class="fab fa-figma" style="color: #E34F26;;" class="descrição"></i>Figma</li> 
+                                <li><i class="simple-icons:xadobe xd" style="color: #E34F26;;" class="descrição"></i>adobe XD</li>  
+
+                            </ul>
+                        </li>
+                        <li><i class="fab fa-node-js"><label for="" class="descrição">Front-End</label></i>
+                            <ul>
+                                <li><i class="fab fa-html5" style="color: #E34F26;;" class="descrição"></i>html</li> 
+                                <li><i class="fab fa-css3-alt" style="color: #1572B6;" class="descrição"></i>css</li> 
+                                <li><i class="fab fa-js-square" style="color: #beaa15;" class="descrição"></i>javascript</li> 
+                                <li><i class="fab fa-vuejs" style="color: #47A248;" class="descrição"></i>VUejs</li> 
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="links_projectos">
+                    <li> <i class="fab fa-docker"></i> Docker</li> 
+                    <li> <i class="fab fa-git-alt git"></i> Git</li> 
+                    
+                </div>
+            </div> 
+        </div>
+
+        <!-- projetos-->
+        <div class="projectos case">
+
+            <div class="project_cards">
+                <div class="case_projecto1">
+                
+                    <div class="links_projectos">
+                        <li> <i class="fab fa-docker"></i> Docker</li> 
+                        <li> <i class="fab fa-git-alt"></i> Git</li> 
+                        
+                    </div>
+                </div> 
+    
+                <div class="case_projecto1">
+                    
+                    <div class="links_projectos">
+                        <li> <i class="fab fa-docker"></i> Docker</li> 
+                        <li> <i class="fab fa-git-alt"></i> Git</li> 
+                        
+                    </div>
+                </div>  
+            </div>
+            <div class="project_cards">
+                <div class="case_projecto1">
+                
+                    <div class="links_projectos">
+                        <li> <i class="fab fa-docker"></i> Docker</li> 
+                        <li> <i class="fab fa-git-alt"></i> Git</li> 
+                        
+                    </div>
+                </div> 
+    
+                <div class="case_projecto1">
+                    
+                    <div class="links_projectos">
+                        <li> <i class="fab fa-docker"></i> Docker</li> 
+                        <li> <i class="fab fa-git-alt"></i> Git</li> 
+                        
+                    </div>
+                </div>  
+            </div>
+
+        </div>
+    </main>
+    <footer class="rodape">
+        <div class="contactos">
+            <p>created by: <a href="">Armando Baltazar </a></p>
+            <p>created by: <a href="">Armando Baltazar </a></p>
+        </div>
+           
+    </footer>
+</body>
+</html>

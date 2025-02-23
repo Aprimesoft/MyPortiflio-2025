@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    box-sizing: border-box; 
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+:root{
+
+}
+body{
+    /*background-image: linear-gradient(
+        90deg,
+        #1B1B1B, 
+        #3f3d3d,
+        #101010
+    ); */
+    background-image: linear-gradient(35deg,#1B1B1B,#3f3d3d,#1B1B1B);
+}
+/** estilização do header da pagina*/
+.cabecalio{ 
+    width: 100%;
+    margin: -40px auto 0 auto;
+    color: white; 
+    display: flex;
+    flex-direction: row;  
+    padding: 10px 15px;
+    position: fixed; 
+    background-image: linear-gradient(35deg,#1B1B1B,#3f3d3d,#1B1B1B);
+} 
+.logoMarca{
+    display: flex;
+    flex-direction: row; 
+    margin: 0 50px;
+}
+.flex-marca{ 
+    padding: 10px; 
+    justify-content: center;
+    align-content: center;
+     
+}
+
+.logo{
+    font-size: 20pt;
+    border: 3.5px solid /*#FF3366*/white;
+    box-shadow: 1rem 2rem 1rem #1b1b1b29;
+    border-radius: 50%; 
+    height: 96px;
+    
+}
+.autor, .autor_capa{
+    font-size: arial;
+    font-weight: bold;
+    padding: 15px 0;
+    margin-top: -10px; 
+    text-transform: uppercase;
+}
+.autor_capa{
+    font-size: 15pt;
+    color: rgba(240, 248, 255, 0.646); 
+     
+}
+.job{
+    text-transform: uppercase;
+    font-size: 12pt;
+    color: #FF3366;
+}
+.navegacao{
+    position: absolute;
+    right: 55px;
+    top: 25px;
+}
+.navegacao ul{
+    display: flex;
+}
+.navegacao ul li{
+    list-style: none;
+    padding: 20px 30px; 
+    font-size: 15pt;
+}
+.navegacao ul li:hover{
+     border-bottom:3px solid #FF3366;
+     cursor: pointer;
+}
+
+/*** estilização do corpo da pagina ***/
+
+.capa_principal{ 
+    width: 85%;
+    margin:40px auto;
+    display: flex; 
+    flex-wrap: wrap; 
+}
+.flexbox{
+    
+    height: 620px;
+    width: 800px;
+    margin: 10px 10px 50px 10px; 
+}
+.resumo{
+    margin-top: 100px;
+    color: aliceblue;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative; 
+
+}
+.autor_capa{
+    color: rgba(255, 255, 255, 0.764);
+}
+.job_descricao{
+    font-size: 38pt; 
+    padding: 20px 0;
+}
+.p_resumo{
+    font-size: 15pt;
+    line-height: 36px;
+    margin: 15px 0;
+}
+.foto_capa{
+   
+}
+.botns{  
+    margin-top: 80px;
+    bottom: 15px; 
+}
+.botns a{
+    text-decoration: none;
+    font-size: 12pt;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 20px 35px;
+    color: white;  
+    
+}
+.botns a:nth-child(1){ 
+    background-color: #3f3d3d;
+    margin-right: -10px;
+    
+}
+.botns a:nth-child(2){ 
+    background-color: #FF3366;
+    box-shadow: 1px 0.2px .3px rgb(83, 81, 81);
+    
+}
+
+/** Estilizando a secação de projectos****/
+.projectos{
+    /*color: white;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px 0;
+   flex-wrap: wrap;
+   
+
+}
+.case{
+    background-color: transparent; 
+}
+ 
+.flex_projecto1{
+    border-radius: 10px;
+    border: .5px solid rgba(255, 255, 255, 0.089);
+    box-shadow:  1rem 0rem 2rem #51505027;
+    margin: 0px 17px;
+    padding: 15px 20px;
+    min-width: 450px;
+    width: 500px;
+    height: 630px;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    position: relative;
+    box-sizing: border-box;
+    /*color: white;*/
+}
+
+
+.links_projectos{
+    position: absolute;
+    width: 90%;
+    height: 70px;
+    
+    bottom: 0%;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius:11px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    border-top: 1px solid rgba(158, 157, 157, 0.31);
+    
+}
+.links_projectos li{
+    list-style: none;
+    margin: 10px;
+    font: 30pt; 
+    text-transform: uppercase;
+}
+ 
+/**** Estilizando os cards de projectos *****/
+.project_cards{
+    
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+.case_projecto1{
+    border-radius: 10px;
+    border: .5px solid rgba(255, 255, 255, 0.252);
+    box-shadow:  1rem 0rem 2rem #51505061;
+    margin: 15px 17px;
+    padding: 15px 20px;
+    min-width: 450px;
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    position: relative;
+    box-sizing: border-box;
+}
+.git{
+    color: #FF3366;
+    font-size: 18pt;
+}
+/** footer **/
+.rodape{
+    background-color: white;
+    height: 100px;
+}
