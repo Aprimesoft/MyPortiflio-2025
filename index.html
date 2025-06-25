@@ -1,209 +1,309 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <title>ADev-code & Designer</title>
-   
-    <!-- link de estilização-->
-    <link rel="stylesheet" href="./css/style.css">
-     <!-- Font Awesome for icons -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-     <!-- Simple Icons for other tech logos -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/7.12.0/simple-icons.min.css">
- 
-    <style>
-        .titulotec{
-            border-bottom: 1px solid rgba(158, 157, 157, 0.451);
-            padding: 20px 35px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            font-size: 13pt;
-        }
-        .titulotec i{
-            color: #FF3366;
-        }
-        .tecnologias li{
-            list-style: none;
-            padding: 15px 30px; 
-            
-            
-        }
-        .tecnologias li i{
-            font-size: 20pt; 
-        }
-        .tecnologias li ul li{
-             padding: 15px;
-             margin-left: 30px;
-             font-size: 12pt;
-        }
-        .tecnologias li ul li i{
-             padding-right: 15px;
-        }
-        .descrição{
-           font-size: 15pt;
-           padding: 15px;
-           font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@Baltazar</title>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-scroll-left {
+      animation: scroll-left 25s linear infinite;
+    }
+    .hover-glow:hover {
+      box-shadow: 0 0 15px rgba(236, 72, 153, 0.5);
+      transform: scale(1.02);
+      transition: all 0.3s ease-in-out;
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-in-out forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+    #sobre{
+      margin-top: 180px;
+      margin-bottom: -120px;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      ScrollReveal().reveal('.reveal', {
+        duration: 1000,
+        distance: '50px',
+        origin: 'bottom',
+        easing: 'ease-in-out',
+        reset: false
+      });
+    });
+  </script>
 </head>
-<body>
-   
-    <header class="cabecalio">
-        <div class="logoMarca">
-
-            <h1 class="flex-marca logo">ADev</h1>
-            <div class="flex-marca descricao">
-                <h2 class="autor">Armando D. Baltazar</h2>
-                <h2 class="job">Web Developer & UI/UX Designer</h2>
-            </div>
-
+<body class="bg-gradient-to-tr from-gray-900 via-gray-800 to-gray-900 text-white scroll-smooth fade-in">
+  <header class="fixed top-0 w-full bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 shadow z-50 transition-all duration-500 ease-in-out">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex flex-wrap md:flex-nowrap justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <div class="border-4 border-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold shadow-lg transform transition-transform hover:rotate-6">
+          <  <i class="text-pink-900 font-bold"> / </i>  >
         </div>
-        <nav class="navegacao">
-            <ul>
-                <li> <i class="fab fa-github"></i> Github</li>
-                <li><i class="fab fa-docker"></i>Dockerhub</li>
-                <li><i class="fab fa-linkedin"></i>Linkedin</li> 
-                <li><i class="fab fa-whatsapp"></i>Whatsapp</li>
+        <div class="transition-opacity duration-700">
+          <h1 class="text-xl font-bold uppercase">Armando D. Baltazar</h1>
+          <p class="text-pink-500 uppercase text-sm">Engenheiro de Software</p>
+        </div>
+      </div>
+      <nav class="w-full md:w-auto mt-4 md:mt-0">
+        <ul class="flex flex-wrap justify-center md:justify-end space-x-4 text-sm uppercase">
+          <li><a href="https://github.com/seu-usuario" target="_blank" class="hover:text-pink-500 flex items-center gap-1 transition-colors"><i class="fab fa-github"></i> Github</a></li>
+          <li><a href="https://github.com/seu-usuario" target="_blank" class="hover:text-pink-500 flex items-center gap-1 transition-colors"><i class="fab fa-docker"></i> Dockerhub</a></li>
+          <li><a href="https://www.linkedin.com/in/seu-usuario" target="_blank" class="hover:text-pink-500 flex items-center gap-1 transition-colors"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          <li hidden><a href="#certificacoes" class="hover:text-pink-500 transition-colors">Certificações</a></li>
+          <li hidden><a href="#skills" class="hover:text-pink-500 transition-colors">Skills</a></li>
+          <li hidden><a href="#projetos" class="hover:text-pink-500 transition-colors">Projetos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-36 pb-20">
+    <section class="mt-28 max-w-7xl mx-auto px-6 flex flex-wrap gap-10 items-center justify-between reveal">
+      <div class="w-full md:w-1/2 space-y-6">
+        <h2 class="text-gray-400 text-xl">Armando D. Baltazar</h2>
+        <h1 class="text-4xl font-bold leading-tight">
+          Desenvolvedor Backend
+        </h1>
+        <p class="text-gray-300 text-lg">
+          Apaixonado por criar experiências digitais intuitivas e impactantes.
+          Especializado na harmonia entre funcionalidade e estética para entregar interfaces envolventes.
+        </p>
+        <div class="flex space-x-4 mt-6">
+          <a href="#sobre" class="bg-gray-700 hover:bg-gray-600 px-5 py-3 uppercase text-sm rounded transition-transform hover:scale-105">Sobre mim</a>
+          <a href="#skills" class="bg-pink-600 hover:bg-pink-500 px-5 py-3 uppercase text-sm rounded transition-transform hover:scale-105">Skills</a>
+        </div>
+      </div>
+    </section>
+    <!-- Sobre Mim -->
+    <section id="sobre" class="py-20 bg-white text-gray-900 reveal">
+      <div class="max-w-6xl mx-auto px-7 flex flex-col md:flex-row items-center gap-10">
+        <img src="./fotobaltazar.jpg" alt="Foto de Armando Baltazar" class="rounded-full w-48 h-48 object-cover shadow-lg" />
+        <div>
+          <h2 class="text-3xl font-bold mb-4">Sobre Mim</h2>
+          <p class="mb-4 text-lg">Sou o Baltazar, Desenvolvedor web, com foco em Desenvolvimento Backend com experiência sólida em React, Nodejs e MongoDB. Tenho paixão por transformar ideias em soluções digitais funcionais e intuitivas.</p>
+          <p class="text-lg">Trabalho com foco na qualidade do código (Clean Code, testes), performance e acessibilidade. Busco alinhar design funcional com excelência técnica.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="mt-24 bg-gray-900 text-white py-16 reveal">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl font-bold text-center uppercase mb-10">Skills Técnicas</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="hover-glow bgs-gray-100 p-4 rounded transition-all">
+            <h3 class="text-xl font-bold text-pink-600 mb-4"><i class="fas fa-code mr-2"></i>Linguagens</h3>
+            <ul class="space-y-4 font-bold text-whites-700 text-sm">
+              <li><i class="fab fa-js-square mr-2 text-yellow-500"></i>JavaScript (ES6+)</li>
+              <li><i class="fas fa-code-branch mr-2 text-blue-600"></i>TypeScript</li>
+              <li><i class="fab fa-php mr-2 text-indigo-600"></i>PHP</li>
             </ul>
-        </nav>
-       
-    </header> 
-    <main class="seccaoprincipal">
-        <div class="capa_principal">
-            <div class="flexbox resumo">
-                <h2 class="autor_capa">Armando D. Baltazar</h2>
-                <h1 class="job_descricao">
-                    Web Developer & UI/UX Designer
-                </h1>
-                <h1 class="headline">
-                    Widget Inc.
-                </h1>
-                <p class="p_resumo">
-                    Web developer e designer UI/UX apaixonado por criar experiências digitais intuitivas e visualmente impactantes. Especializado na harmonia entre funcionalidade e estética para entregar interfaces que cativam e facilitam a interação do usuário.
-                </p>
-                <div class="botns">
-                    <a href="" class="link_sobre">Sobre</a>
-                    <a href="" class="link_sobre">Skills</a>
-                </div>
-            </div>
-            <div class="flexbox foto_capa" hidden>
-                
-            </div>
+          </div>
+          <div class="hover-glow bgs-gray-100 p-4 rounded transition-all">
+            <h3 class="text-xl font-bold text-pink-600 mb-4"><i class="fas fa-cubes mr-2"></i>Frameworks & Runtime</h3>
+            <ul class="space-y-4 font-bold text-grays-700 text-sm">
+              <li><i class="fab fa-node-js mr-2 text-green-600"></i>Node.js</li>
+              <li><i class="fas fa-server mr-2 text-gray-700"></i>Express.js</li>
+              <li><i class="fab fa-laravel mr-2 text-red-600"></i>Laravel</li>
+            </ul>
+          </div>
+          <div class="hover-glow bgs-gray-100 p-4 rounded transition-all">
+            <h3 class="text-xl font-bold text-pink-600 mb-4"><i class="fas fa-database mr-2"></i>Banco de Dados</h3>
+            <ul class="space-y-4 font-bold text-grays-700 text-sm">
+              <li><i class="fas fa-leaf mr-2 text-green-700"></i>MongoDB</li>
+              <li><i class="fas fa-database mr-2"></i>MySQL</li>
+              <li><i class="fas fa-database mr-2"></i>PostgreSQL</li>
+            </ul>
+          </div>
+          <div class="hover-glow bgs-gray-100 p-4 rounded transition-all">
+            <h3 class="text-xl font-bold text-pink-600 mb-4"><i class="fas fa-tools mr-2"></i>DevOps</h3>
+            <ul class="space-y-4 font-bold text-grays-700 text-sm">
+              <li><i class="fab fa-docker mr-2 text-blue-600"></i>Docker</li>
+              <li><i class="fab fa-git-alt mr-2 text-orange-600"></i>Git & GitHub</li>
+              <li><i class="fas fa-sync-alt mr-2 text-purple-600"></i>CI/CD (GitHub Actions)</li>
+            </ul>
+          </div>
+          <div class="hover-glow bgs-gray-100 p-4 rounded transition-all">
+            <h3 class="text-xl font-bold text-pink-600 mb-4"><i class="fas fa-check-circle mr-2"></i>Boas Práticas</h3>
+            <ul class="space-y-4 font-bold text-grays-700 text-sm">
+              <li>Clean Code</li>
+              <li>Testes Automatizados</li>
+              <li>RESTful APIs</li>
+            </ul>
+          </div>
+          <div class="hover-glow bgs-gray-100 p-4 rounded transition-all">
+            <h3 class="text-xl font-bold text-pink-600 mb-4"><i class="fas fa-toolbox mr-2"></i>Ferramentas</h3>
+            <ul class="space-y-4 font-bold text-grays-700 text-sm">
+              <li><i class="fas fa-paper-plane mr-2 text-pink-500"></i>Postman</li>
+              <li><i class="fas fa-project-diagram mr-2 text-purple-500"></i>Swagger</li>
+              <li><i class="fab fa-figma mr-2 text-pink-600"></i>Figma</li>
+            </ul>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="projectos" hidden>
-            <div class="flex_projecto1">
-                <h1 class="titulotec">  <i class="fas fa-code"></i> Back-End</h1>
-                <nav class="tecnologias">
-                    <ul>
-                        <li><i class="fab fa-node-js" style="color: rgb(111, 155, 50);"><label for="" class="descrição">Nodejs</label></i>
-                            <ul>
-                                <li>TypeScript</li>
-                                <li>NextJs</li>
-                                <li>Sequelize</li>
-                            </ul>
-                        </li>
-
-                        <li><i  class="fab fa-laravel" style="color: #cd1f4a;"><label for="" class="descrição">PHP / Laravel</label></i></li>
-                        <li> <i class="fas fa-database" style="color: #00758F;"><label for="" class="descrição">Databases</label>
-                        </i>
-                            <ul>
-                                <li>MySql</li>
-                                <li>SqlServer</li> 
-                                <li><i class="fas fa-leaf" style="color: #47A248;" class="descrição" hidden></i>MongoDB</li> 
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="links_projectos">
-                    <li> <i class="fab fa-docker"></i> Docker</li> 
-                    <li> <i class="fab fa-git-alt git"></i> Git</li> 
-                    <li style="color: #63cb09;">  <i class="fab fa-swagger-alt" style="color: #85EA2D;"></i> Swagger</li> 
-                    
-                </div>
+    <section id="certificacoes" class="bg-gray-100 text-gray-800 py-16 reveal">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-2xl font-bold text-center uppercase mb-10">Certificações</h2>
+        <div class="relative overflow-hidden">
+          <div id="carousel" class="flex space-x-6 animate-scroll-left">
+            <div class="bg-transparent rounded shadow p-4 min-w-[300px] snap-center hover:scale-105 transition-transform text-center">
+              <img src="https://www.alura.com.br/assets/img/alura-share.1678902174.png" class="h-10 mx-auto mb-2" alt="Alura">
+              <p class="font-semibold">Node.js: APIs RESTful - Alura</p>
+              <p class="text-sm text-gray-400">2023</p>
             </div>
-
-            <div class="flex_projecto1">
-                <h1 class="titulotec">  <i class="fas fa-code"></i> front-End & UI/UX designer</h1>
-                <nav class="tecnologias">
-                    <ul>
-                        <li><i class="fab fa-node-js"><label for="" class="descrição">UI/UX Designer</label></i>
-                            <ul>
-                                <li><i class="fab fa-figma" style="color: #E34F26;;" class="descrição"></i>Figma</li> 
-                                <li><i class="simple-icons:xadobe xd" style="color: #E34F26;;" class="descrição"></i>adobe XD</li>  
-
-                            </ul>
-                        </li>
-                        <li><i class="fab fa-node-js"><label for="" class="descrição">Front-End</label></i>
-                            <ul>
-                                <li><i class="fab fa-html5" style="color: #E34F26;;" class="descrição"></i>html</li> 
-                                <li><i class="fab fa-css3-alt" style="color: #1572B6;" class="descrição"></i>css</li> 
-                                <li><i class="fab fa-js-square" style="color: #beaa15;" class="descrição"></i>javascript</li> 
-                                <li><i class="fab fa-vuejs" style="color: #47A248;" class="descrição"></i>VUejs</li> 
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="links_projectos">
-                    <li> <i class="fab fa-docker"></i> Docker</li> 
-                    <li> <i class="fab fa-git-alt git"></i> Git</li> 
-                    
-                </div>
-            </div> 
+            <div class="bg-transparent rounded shadow p-4 min-w-[300px] snap-center hover:scale-105 transition-transform text-center">
+              <img src="https://cdn.worldvectorlogo.com/logos/udemy.svg" class="h-10 mx-auto mb-2" alt="Udemy">
+              <p class="font-semibold">Laravel Avançado - Udemy</p>
+              <p class="text-sm text-gray-400">2023</p>
+            </div>
+            <div class="bg-transparent rounded shadow p-4 min-w-[300px] snap-center hover:scale-105 transition-transform text-center">
+              <img src="https://webassets.mongodb.com/_com_assets/global/mongodb-logo-white.png" class="h-10 mx-auto mb-2" alt="MongoDB">
+              <p class="font-semibold">MongoDB Essentials - Mongo University</p>
+              <p class="text-sm text-gray-400">2022</p>
+            </div>
+            <div class="bg-transparent rounded shadow p-4 min-w-[300px] snap-center hover:scale-105 transition-transform text-center">
+              <img src="https://hermes.digitalinnovation.one/assets/diome/logo.png" class="h-10 mx-auto mb-2" alt="DIO">
+              <p class="font-semibold">Docker e Kubernetes - DIO</p>
+              <p class="text-sm text-gray-400">2022</p>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+<section id="projetos" class="bg-gray-900 text-white py-16 fade-in-section">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-2xl font-bold text-center uppercase mb-10">Projetos</h2>
+    <div class="grid md:grid-cols-3 gap-8">
 
-        <!-- projetos-->
-        <div class="projectos case">
+      <!-- Projeto 1 -->
+      <div class="bg-gray-800 rounded-lg shadow p-6 hover:scale-105 transition-transform duration-300">
+        <h3 class="text-lg font-semibold text-pink-500 mb-2">SIG-PixelPrint</h3>
+        <p class="text-gray-300 text-sm mb-2">Sistema online para gestão de pedidos de impressão sob demanda.</p>
+        <iframe src="https://pixelprint-production.up.railway.app/" class="w-full h-40 rounded mb-2" frameborder="0"></iframe>
+        <a href="https://pixelprint-production.up.railway.app/" target="_blank" class="text-pink-400 text-sm underline block mb-2">Visitar Projeto</a>
+        <button onclick="abrirModal('pixelprint')" class="bg-pink-600 hover:bg-pink-500 text-sm px-4 py-2 rounded text-white">Ver Aspectos Técnicos</button>
+      </div>
 
-            <div class="project_cards">
-                <div class="case_projecto1">
-                
-                    <div class="links_projectos">
-                        <li> <i class="fab fa-docker"></i> Docker</li> 
-                        <li> <i class="fab fa-git-alt"></i> Git</li> 
-                        
-                    </div>
-                </div> 
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50">
+    <div class="bg-white text-gray-800 rounded-lg max-w-md w-full p-6 relative">
+      <button onclick="fecharModal()" class="absolute top-2 right-2 text-gray-600 hover:text-red-600 text-xl">&times;</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+</section>
     
-                <div class="case_projecto1">
-                    
-                    <div class="links_projectos">
-                        <li> <i class="fab fa-docker"></i> Docker</li> 
-                        <li> <i class="fab fa-git-alt"></i> Git</li> 
-                        
-                    </div>
-                </div>  
-            </div>
-            <div class="project_cards">
-                <div class="case_projecto1">
-                
-                    <div class="links_projectos">
-                        <li> <i class="fab fa-docker"></i> Docker</li> 
-                        <li> <i class="fab fa-git-alt"></i> Git</li> 
-                        
-                    </div>
-                </div> 
-    
-                <div class="case_projecto1">
-                    
-                    <div class="links_projectos">
-                        <li> <i class="fab fa-docker"></i> Docker</li> 
-                        <li> <i class="fab fa-git-alt"></i> Git</li> 
-                        
-                    </div>
-                </div>  
-            </div>
+    <section id="contato" class="py-20 bg-white text-gray-800 reveal">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-10 uppercase">Contato</h2>
+        <form action="https://formspree.io/f/meqbrdyg" method="POST" class="space-y-6">
+          <div>
+            <label for="nome" class="block text-sm font-medium mb-1">Nome</label>
+            <input type="text" name="nome" id="nome" required class="w-full p-3 rounded bg-gray-100 border border-gray-300 focus:outline-none focus:ring focus:ring-pink-500" aria-label="Nome" />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium mb-1">Email</label>
+            <input type="email" name="email" id="email" required class="w-full p-3 rounded bg-gray-100 border border-gray-300 focus:outline-none focus:ring focus:ring-pink-500" aria-label="Email" />
+          </div>
+          <div>
+            <label for="mensagem" class="block text-sm font-medium mb-1">Mensagem</label>
+            <textarea name="mensagem" id="mensagem" rows="5" required class="w-full p-3 rounded bg-gray-100 border border-gray-300 focus:outline-none focus:ring focus:ring-pink-500" aria-label="Mensagem"></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="bg-pink-600 hover:bg-pink-500 text-white px-6 py-3 rounded uppercase text-sm">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </section>
 
-        </div>
-    </main>
-    <footer class="rodape">
-        <div class="contactos">
-            <p>created by: <a href="">Armando Baltazar </a></p>
-            <p>created by: <a href="">Armando Baltazar </a></p>
-        </div>
-           
-    </footer>
+
+  </main>
+
+  <!-- Botão Flutuante WhatsApp -->
+  <a href="https://wa.me/244933493238" class="whatsapp-float" target="_blank" aria-label="Contactar @Baltazar via WhatsApp">
+    <i class="fab fa-whatsapp fa-lg"></i>
+  </a>
+
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="text-center">
+      <p class="text-sm">© 2025 Armando Baltazar | Desenvolvedor Web</p>
+    </div>
+  </footer>
+<script>
+  const dadosProjetos = {
+    pixelprint: {
+      titulo: 'PixelPrint - Sistema de Impressão Online',
+      conteudo: `
+        <p><strong>Tecnologias:</strong> Node.js, Express, MySQL, Sequelize, EJS</p>
+        <p><strong>Ambiente:</strong> Railway, GitHub Actions, Docker</p>
+        <p><strong>Problema Resolvido:</strong> Automatização do processo de receção de pedidos e emissão de relatórios na gráfica. Reduziu erros e o tempo gasto em tarefas manuais.</p>
+        <p><strong>Meu Papel:</strong> Desenvolvedor back-end responsável pela modelagem do banco de dados, API RESTful e deploy.</p>
+        <p><strong>Boas Práticas:</strong> Clean Code, versionamento Git, testes com Jest, CI/CD no GitHub.</p>
+      `
+    },
+    sentia: {
+      titulo: 'SentIA.io - Análise de Sentimentos',
+      conteudo: `
+        <p><strong>Tecnologias:</strong> React, Node.js, Tailwind CSS, MongoDB, Chart.js</p>
+        <p><strong>Ambiente:</strong> Vercel, MongoDB Atlas, GitHub</p>
+        <p><strong>Problema Resolvido:</strong> Necessidade de analisar opiniões em massa extraídas de arquivos CSV. Permite decisões baseadas em dados.</p>
+        <p><strong>Meu Papel:</strong> Full Stack Developer. Criei o front com React + Tailwind e API com Express + MongoDB.</p>
+        <p><strong>Boas Práticas:</strong> Responsividade, acessibilidade, documentação Swagger e modularização de código.</p>
+      `
+    }
+  };
+
+  function abrirModal(chave) {
+    const modal = document.getElementById('modal');
+    const content = document.getElementById('modal-content');
+    content.innerHTML = `<h2 class='text-xl font-bold mb-4 text-pink-600'>${dadosProjetos[chave].titulo}</h2>${dadosProjetos[chave].conteudo}`;
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function fecharModal() {
+    const modal = document.getElementById('modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+</script>
 </body>
 </html>
